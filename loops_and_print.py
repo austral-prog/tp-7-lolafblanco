@@ -1,20 +1,20 @@
-def enumerate_list(lista: list[str]):
-    newArray = []
+def enumerate_list(list = ["Red", "Green", "", "White", "Black"]):
+    new = []
+    a = 0
+    for element in list:
+        if element:
+            new.append(f"{a}. {element}")
+            a = a+1
+    return new
+enumerate_list()
 
-    for el in lista:
-        if not el: continue
 
-        newArray.append(f"{len(newArray)}. {el}")
-
-    return newArray
-
-def enumerate_backwards(lista: list[str]):
-    newArray = []
-
-    for el in lista:
-        if not el: continue
-
-        newArray.append(f"{len(newArray)}. {el[::-1]}")
-
-    return newArray
-
+def enumerate_backwards(list = ["Red", "Green", "", "White", "Black"]):
+    new = []
+    a = 0
+    for element in list:
+        if element:
+            new.append(f"{a}. {element[::-1]}")
+            a = a+1
+    return new
+enumerate_backwards()
